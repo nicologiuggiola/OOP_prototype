@@ -107,3 +107,17 @@
 // se un elemento non è parsabile, ritorna errore "stringa parzialmente invalida" e return di oggetto con oggetti parsabili;
 // errore se string è vuota
 //funzione deve essere statica, errors in altro file.
+
+string1 = "2; 2,5; 4.1; 6; pippo"
+
+function CSVparse(string) {
+    let tempArray = []
+    let stringNumber = string
+    if (string.includes(",")) {
+        stringNumber = string.replace(",", ".");
+    }
+    tempArray = stringNumber.split("; ")
+    console.log(tempArray);
+}
+
+CSVparse(string1);
